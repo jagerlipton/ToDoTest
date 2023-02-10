@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="items_recycler_margins">8dp</dimen>
+
+    <dimen name="guideline_margin">16dp</dimen>
+    <dimen name="textField_margin_top">20dp</dimen>
+    <dimen name="dateTextSize">16sp</dimen>
+    <dimen name="recycler_item_name_text_margin">8dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="info_text_margin_top">8dp</dimen>
+
+</resources>

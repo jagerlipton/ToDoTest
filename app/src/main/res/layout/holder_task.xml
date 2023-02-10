@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/items_recycler_margins"
+    android:background="@color/holder_color">
+
+    <TextView
+        android:id="@+id/dateStartLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/items_recycler_margins"
+        android:layout_marginTop="@dimen/items_recycler_margins"
+        android:text="@string/textview_date_start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/items_recycler_margins"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateStartLabelTextView" />
+
+    <TextView
+        android:id="@+id/infoLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/items_recycler_margins"
+        android:text="@string/textview_task_info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+    <TextView
+        android:id="@+id/InfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/items_recycler_margins"
+        android:layout_marginBottom="@dimen/items_recycler_margins"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dateTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoLabelTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

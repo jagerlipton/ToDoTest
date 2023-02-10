@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ITServiceToDoList</string>
+
+    <string name="current_tasks_fragment_label">Текущие задачи</string>
+    <string name="completed_tasks_fragment_label">Выполненные задачи</string>
+    <string name="change_tasks_fragment_label">Изменение задачи</string>
+    <string name="new_tasks_fragment_label">Новая задача</string>
+    <string name="successed_tasks_fragment_label">Мои успехи</string>
+
+    <string name="current">Текущие</string>
+    <string name="history">Выполненные</string>
+    <string name="successes">Мои успехи</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_done">Выполнить</string>
+
+    <string name="textview_completed_task_count">Количество выполненных:</string>
+    <string name="textview_average_time">Среднее время выполнения:</string>
+    <string name="textview_min_time">Минимальное время выполнения:</string>
+    <string name="textview_max_time">Максимальное время выполнения:</string>
+
+    <string name="textview_date_start">Дата создания:</string>
+    <string name="textview_date_end">Дата завершения:</string>
+    <string name="textview_task_info">Комментарий:</string>
+    <string name="textview_task_status">Текущий статус:</string>
+    <string name="new_task">Создать задачу</string>
+
+
+</resources>

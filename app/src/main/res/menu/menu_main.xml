@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jagerlipton.itservicetodolist.presentation.ui.MainActivity">
+
+    <item
+        android:id="@+id/action_new_task"
+        android:title="@string/new_task"
+        />
+
+    <item
+        android:id="@+id/action_current"
+        android:title="@string/current"
+         />
+    <item
+        android:id="@+id/action_history"
+        android:title="@string/history"
+        />
+
+    <item
+        android:id="@+id/action_info"
+        android:title="@string/successes"
+        />
+
+</menu>

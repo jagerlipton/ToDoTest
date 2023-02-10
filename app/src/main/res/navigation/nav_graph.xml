@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CurrentTasks">
+
+    <fragment
+        android:id="@+id/CurrentTasks"
+        android:name="com.jagerlipton.itservicetodolist.presentation.ui.currenttasks.CurrentTasksFragment"
+        android:label="@string/current_tasks_fragment_label"
+        tools:layout="@layout/fragment_current_tasks">
+
+        <action
+            android:id="@+id/action_CurrentTasksFragment_to_CompletedTasksFragment"
+            app:destination="@id/CompletedTasks" />
+        <action
+            android:id="@+id/action_CurrentTasks_to_ChangeTasks"
+            app:destination="@id/ChangeTasks" />
+        <action
+            android:id="@+id/action_CurrentTasks_to_InfoTasks"
+            app:destination="@id/InfoTasks" />
+    </fragment>
+    <fragment
+        android:id="@+id/CompletedTasks"
+        android:name="com.jagerlipton.itservicetodolist.presentation.ui.completedtasks.CompletedTasksFragment"
+        android:label="@string/completed_tasks_fragment_label"
+        tools:layout="@layout/fragment_comleted_tasks"/>
+
+    <fragment
+        android:id="@+id/ChangeTasks"
+        android:name="com.jagerlipton.itservicetodolist.presentation.ui.changetask.ChangeTaskFragment"
+        android:label="@string/change_tasks_fragment_label"
+        tools:layout="@layout/fragment_change_task">
+    </fragment>
+
+    <fragment
+        android:id="@+id/InfoTasks"
+        android:name="com.jagerlipton.itservicetodolist.presentation.ui.info.InfoFragment"
+        android:label="@string/successed_tasks_fragment_label"
+        tools:layout="@layout/fragment_info">
+        <action
+            android:id="@+id/action_InfoTasks_to_ChangeTasks"
+            app:destination="@id/ChangeTasks"
+            app:popUpTo="@id/InfoTasks"
+         />
+    </fragment>
+
+</navigation>
