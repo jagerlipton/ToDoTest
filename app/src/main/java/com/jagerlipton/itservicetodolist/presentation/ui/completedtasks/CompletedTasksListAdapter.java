@@ -48,16 +48,16 @@ public class CompletedTasksListAdapter extends RecyclerView.Adapter<CompletedTas
     @SuppressLint("NotifyDataSetChanged")
     public void addData(List<Task> data) {
         completedTaskList.clear();
-        Collections.sort(data, new Comparator<Task>() {
-            @Override
-            public int compare(Task lhs, Task rhs) {
-                if (lhs.getDateEnd() > rhs.getDateEnd()) {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            }
-        });
+//        Collections.sort(data, new Comparator<Task>() {  //  можно использовать сортировку списка так
+//            @Override
+//            public int compare(Task lhs, Task rhs) {
+//                if (lhs.getDateEnd() > rhs.getDateEnd()) {
+//                    return -1;
+//                } else {
+//                    return 1;
+//                }
+//            }
+//        });
         completedTaskList.addAll(data);
         notifyDataSetChanged();
     }

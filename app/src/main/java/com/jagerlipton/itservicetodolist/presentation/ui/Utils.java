@@ -2,8 +2,10 @@ package com.jagerlipton.itservicetodolist.presentation.ui;
 
 import android.annotation.SuppressLint;
 import android.text.format.DateFormat;
+import android.util.Log;
 
 import java.util.Date;
+import java.util.TimeZone;
 
 public class Utils {
 
@@ -19,7 +21,7 @@ public class Utils {
 
     public static String longToDateTime(long timestamp) {
         try {
-            return DateFormat.format("HH:mm:ss dd/mm/yyyy", new Date(timestamp)).toString();
+            return DateFormat.format("HH:mm:ss dd/MM/yyyy", new Date(timestamp)).toString();
         } catch (Exception e) {
             e.toString();
             return null;

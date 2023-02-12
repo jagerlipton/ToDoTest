@@ -18,7 +18,8 @@ public class Repository implements IRepository {
     @Override
     public List<Task> getCurrentTasks() {
         List<Task> currentTaskList = new ArrayList<>();
-        List<TaskDB> BDTaskList = taskDAO.getNewTaskList();
+      //  List<TaskDB> BDTaskList = taskDAO.getNewTaskList();
+        List<TaskDB> BDTaskList = taskDAO.getNewTaskListSorted();
         currentTaskList = TaskDB.mapTaskDBListToTaskList(BDTaskList);
         return currentTaskList;
     }
@@ -26,10 +27,12 @@ public class Repository implements IRepository {
     @Override
     public List<Task> getCompletedTasks() {
         List<Task> currentTaskList = new ArrayList<>();
-        List<TaskDB> BDTaskList = taskDAO.getDoneTaskList();
+       // List<TaskDB> BDTaskList = taskDAO.getDoneTaskList();
+        List<TaskDB> BDTaskList = taskDAO.getDoneTaskListSorted();
         currentTaskList = TaskDB.mapTaskDBListToTaskList(BDTaskList);
         return currentTaskList;
     }
+
 
     @Override
     public Task getTaskFromID(Integer index) {

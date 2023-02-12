@@ -49,16 +49,16 @@ public class CurrentTasksListAdapter extends RecyclerView.Adapter<CurrentTasksLi
     @SuppressLint("NotifyDataSetChanged")
     public void addData(List<Task> data) {
         currentTasksList.clear();
-        Collections.sort(data, new Comparator<Task>() {
-            @Override
-            public int compare(Task lhs, Task rhs) {
-                if (lhs.getDateStart() > rhs.getDateStart()) {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            }
-        });
+//        Collections.sort(data, new Comparator<Task>() { //  можно использовать сортировку списка так
+//            @Override
+//            public int compare(Task lhs, Task rhs) {
+//                if (lhs.getDateStart() > rhs.getDateStart()) {
+//                    return -1;
+//                } else {
+//                    return 1;
+//                }
+//            }
+//        });
         currentTasksList.addAll(data);
         notifyDataSetChanged();
     }

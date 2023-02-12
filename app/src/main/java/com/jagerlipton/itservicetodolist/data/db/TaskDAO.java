@@ -24,6 +24,12 @@ public interface TaskDAO {
     @Query("SELECT * FROM task_table WHERE status = 'DONE'") // получить список всех выполненных дел
     List<TaskDB> getDoneTaskList();
 
+    @Query("SELECT * FROM task_table WHERE status = 'NEW' ORDER BY dateStart DESC") // получить список всех новых дел c сортировкой
+    List<TaskDB> getNewTaskListSorted();
+
+    @Query("SELECT * FROM task_table WHERE status = 'DONE' ORDER BY dateEnd DESC") // получить список всех выполненных дел c сортировкой
+    List<TaskDB> getDoneTaskListSorted();
+
     @Query("SELECT * FROM task_table") // получить список всех дел
     List<TaskDB> getAllTaskList();
 
