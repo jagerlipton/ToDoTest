@@ -1,5 +1,7 @@
 package com.jagerlipton.itservicetodolist.data.repository;
 
+import androidx.sqlite.db.SimpleSQLiteQuery;
+
 import com.jagerlipton.itservicetodolist.data.db.TaskDAO;
 import com.jagerlipton.itservicetodolist.data.db.model.TaskDB;
 import com.jagerlipton.itservicetodolist.presentation.model.Task;
@@ -77,5 +79,25 @@ public class Repository implements IRepository {
     @Override
     public Integer getMaxTimeID() {
         return taskDAO.getMaxTimeID();
+    }
+
+    @Override
+    public Long getCompletedTaskCountRaw() {
+           return  taskDAO.sendRawQuery(new SimpleSQLiteQuery("SELECT COUNT(id) FROM task_table WHERE status = 'DONE'"));
+    }
+
+    @Override
+    public Long getAverageCompleteTimeRaw() {
+        return  taskDAO.sendRawQuery(new SimpleSQLiteQuery("SELECT AVG(dateEnd - dateStart) FROM task_table WHERE status = 'DONE'"));
+    }
+
+    @Override
+    public Long getMinCompleteTimeRaw() {
+        return  taskDAO.sendRawQuery(new SimpleSQLiteQuery("SELECT MIN(dateEnd - dateStart) FROM task_table WHERE status = 'DONE'"));
+    }
+
+    @Override
+    public Long getMaxCompleteTimeRaw() {
+        return  taskDAO.sendRawQuery(new SimpleSQLiteQuery("SELECT MAX(dateEnd - dateStart) FROM task_table WHERE status = 'DONE'"));
     }
 }

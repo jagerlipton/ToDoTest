@@ -24,7 +24,7 @@ public class InfoFragment extends Fragment {
 
     private FragmentInfoBinding binding;
     private InfoViewModel infoViewModel;
-    private Observer<Integer> completeCountObserver;
+    private Observer<Long> completeCountObserver;
     private Observer<Long> minTimeObserver;
     private Observer<Long> maxTimeObserver;
     private Observer<Long> averageTimeObserver;
@@ -82,7 +82,7 @@ public class InfoFragment extends Fragment {
     }
 
     @SuppressLint("SetTextI18n")
-    private void setTextCompleteCount(Integer count) {
+    private void setTextCompleteCount(Long count) {
         binding.completedCount.setText(count.toString());
     }
 

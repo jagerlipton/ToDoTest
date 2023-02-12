@@ -4,8 +4,14 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.RawQuery;
 import androidx.room.Update;
+import androidx.sqlite.db.SimpleSQLiteQuery;
+import androidx.sqlite.db.SupportSQLiteQuery;
+
 import com.jagerlipton.itservicetodolist.data.db.model.TaskDB;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -59,5 +65,8 @@ public interface TaskDAO {
 
     @Query("SELECT id, MAX(dateEnd - dateStart) FROM task_table WHERE status = 'DONE'")  // получить id задачи с максимальным временем
     int getMaxTimeID();
+
+    @RawQuery
+    long sendRawQuery(SupportSQLiteQuery query);  // динамические запросы
 
 }

@@ -14,8 +14,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 public class InfoViewModel extends ViewModel {
     private IRepository repository;
 
-    private final MutableLiveData<Integer> completeCount = new MutableLiveData<>();
-    public LiveData<Integer> getCompleteCount() {
+    private final MutableLiveData<Long> completeCount = new MutableLiveData<>();
+    public LiveData<Long> getCompleteCount() {
         return completeCount;
     }
 
@@ -46,10 +46,17 @@ public class InfoViewModel extends ViewModel {
     }
 
     public void getInfo() {
-        completeCount.setValue(repository.getCompletedTaskCount());
-        minTime.setValue(repository.getMinCompleteTime());
-        maxTime.setValue(repository.getMaxCompleteTime());
-        averageTime.setValue(repository.getAverageCompleteTime());
+      //  completeCount.setValue(repository.getCompletedTaskCount());
+        completeCount.setValue(repository.getCompletedTaskCountRaw());
+
+      //  minTime.setValue(repository.getMinCompleteTime());
+        minTime.setValue(repository.getMinCompleteTimeRaw());
+
+     //   maxTime.setValue(repository.getMaxCompleteTime());
+        maxTime.setValue(repository.getMaxCompleteTimeRaw());
+
+     // averageTime.setValue(repository.getAverageCompleteTime());
+        averageTime.setValue(repository.getAverageCompleteTimeRaw());
     }
 
     public Integer min_time_click() {

@@ -26,4 +26,13 @@ public interface IRepository {
     void updateTask(Task task);
 
     void createTask(Task task);
+
+    Long getCompletedTaskCountRaw();
+
+    Long getAverageCompleteTimeRaw();
+
+    Long getMinCompleteTimeRaw();
+
+    Long getMaxCompleteTimeRaw();
+
 }
